@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Little World 🌷</title>
+
+<style>
+
+* { box-sizing: border-box; }
+
+body {
+
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  background: #fff8f7;
+
+  color: #765d62;
+
+}
+
+.cover {
+
+  height: 260px;
+
+  background:
+
+    linear-gradient(#f8dfe455, #f8dfe455),
+
+    url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1400")
+
+    center/cover;
+
+}
+
+.profile {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 0 20px 40px;
+
+  text-align: center;
+
+}
+
+.avatar {
+
+  width: 135px;
+
+  height: 135px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 5px solid #fff8f7;
+
+  margin-top: -68px;
+
+}
+
+h1 {
+
+  font-size: 32px;
+
+  font-weight: normal;
+
+  margin: 12px 0;
+
+}
+
+.bio {
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #997c83;
+
+}
+
+button {
+
+  border: none;
+
+  background: #edcbd5;
+
+  color: #76515e;
+
+  padding: 12px 24px;
+
+  border-radius: 25px;
+
+  cursor: pointer;
+
+  margin: 12px 5px;
+
+}
+
+button:hover { background: #e5b6c5; }
+
+.card {
+
+  background: #fffdfc;
+
+  padding: 24px;
+
+  border-radius: 20px;
+
+  margin-top: 25px;
+
+  box-shadow: 0 5px 20px #d9b6bd25;
+
+}
+
+.gallery {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+}
+
+.gallery img {
+
+  width: 100%;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+}
+
+h2 { font-weight: normal; }
+
+footer {
+
+  padding: 25px;
+
+  font-size: 13px;
+
+  color: #b2969d;
+
+}
+
+@media(max-width:500px) {
+
+  .cover { height: 190px; }
+
+  .gallery img { height: 115px; }
+
+  h1 { font-size: 27px; }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="cover"></div>
+
+<main class="profile">
+
+  <img class="avatar"
+
+    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400"
+
+    alt="Ảnh đại diện">
+
+  <h1 id="name">𝓜𝔂 𝓛𝓲𝓽𝓽𝓵𝓮 𝓦𝓸𝓻𝓵𝓭 🌷</h1>
+
+  <p class="bio">
+
+    Just a girl with a little dream ♡<br>
+
+    ☁️ Chậm lại một chút, yêu đời nhiều hơn<br>
+
+    🌸 Flowers, music & little moments
+
+  </p>
+
+  <button onclick="editProfile()">✿ Chỉnh sửa hồ sơ</button>
+
+  <button onclick="showLove()">♡ Send love</button>
+
+  <section class="card">
+
+    <h2>About me ♡</h2>
+
+    <p id="about">
+
+      Một chút dịu dàng, một chút mộng mơ.<br>
+
+      Lưu giữ những ngày bình yên của riêng mình.
+
+    </p>
+
+  </section>
+
+  <section class="card">
+
+    <h2>Little memories 🌷</h2>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400" alt="Hoa">
+
+      <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=400" alt="Bình minh">
+
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400" alt="Thiên nhiên">
+
+    </div>
+
+  </section>
+
+  <footer>Made with ♡ and a little bit of magic</footer>
+
+</main>
+
+<script>
+
+function editProfile() {
+
+  const name = prompt("Nhập tên trang cá nhân:");
+
+  if (name && name.trim()) {
+
+    document.getElementById("name").textContent = name;
+
+  }
+
+  const about = prompt("Viết đôi dòng giới thiệu bản thân:");
+
+  if (about && about.trim()) {
+
+    document.getElementById("about").textContent = about;
+
+  }
+
+}
+
+function showLove() {
+
+  alert("Gửi đến bạn một chút dịu dàng 🌷♡");
+
+}
+
+</script>
+
+</body>
+
+</html>
